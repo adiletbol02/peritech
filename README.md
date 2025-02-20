@@ -46,9 +46,11 @@ PeriTech is a full-stack web application for a computer peripherals store. It of
    ```
 
 2. **Install Dependencies:**
-   ```npm install```
+   ```
+   npm install
+   ```
 
-3. **Set Up Environment Variables:**
+4. **Set Up Environment Variables:**
    Create a .env file in the project root:
    ```
    PORT=3000
@@ -56,14 +58,16 @@ PeriTech is a full-stack web application for a computer peripherals store. It of
    SESSION_SECRET=yourSecretKey
    ```
 
-4. **Populate the Database:**
+5. **Populate the Database:**
    Import the products.json file (provided in the repository) into your MongoDB to seed the product catalog:
    ```mongoimport --db periTech --collection products --file products.json --jsonArray```
 
 ## Running the Application
 
 **Start the server with:**
-```npm start```
+```
+npm start
+```
 
 The application will be available at http://localhost:3000.
 
