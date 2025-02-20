@@ -60,7 +60,9 @@ PeriTech is a full-stack web application for a computer peripherals store. It of
 
 5. **Populate the Database:**
    Import the products.json file (provided in the repository) into your MongoDB to seed the product catalog:
-   ```mongoimport --db periTech --collection products --file products.json --jsonArray```
+   ```
+   mongoimport --db periTech --collection products --file products.json --jsonArray
+   ```
 
 ## Running the Application
 
