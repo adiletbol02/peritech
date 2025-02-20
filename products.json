@@ -1,0 +1,492 @@
+[
+  {
+    "name": "Mechanical Keyboard Pro",
+    "category": "Keyboards",
+    "price": 99.99,
+    "inventory": 50,
+    "description": "A high-performance mechanical keyboard with RGB lighting."
+  },
+  {
+    "name": "Ergonomic Keyboard Comfort",
+    "category": "Keyboards",
+    "price": 89.99,
+    "inventory": 30,
+    "description": "Designed for comfort with ergonomic keys."
+  },
+  {
+    "name": "Gaming Keyboard Ultra",
+    "category": "Keyboards",
+    "price": 129.99,
+    "inventory": 40,
+    "description": "Features programmable keys and customizable backlighting."
+  },
+  {
+    "name": "Wireless Keyboard Slim",
+    "category": "Keyboards",
+    "price": 59.99,
+    "inventory": 100,
+    "description": "Slim, lightweight wireless keyboard with long battery life."
+  },
+  {
+    "name": "Backlit Keyboard X",
+    "category": "Keyboards",
+    "price": 79.99,
+    "inventory": 60,
+    "description": "Backlit keys for low-light environments."
+  },
+  {
+    "name": "Compact Keyboard Mini",
+    "category": "Keyboards",
+    "price": 49.99,
+    "inventory": 80,
+    "description": "Compact design ideal for small desks."
+  },
+  {
+    "name": "Bluetooth Keyboard Flex",
+    "category": "Keyboards",
+    "price": 69.99,
+    "inventory": 70,
+    "description": "Flexible connectivity via Bluetooth."
+  },
+  {
+    "name": "Mechanical Keyboard Lite",
+    "category": "Keyboards",
+    "price": 79.99,
+    "inventory": 90,
+    "description": "Affordable mechanical keyboard with tactile switches."
+  },
+  {
+    "name": "RGB Keyboard Elite",
+    "category": "Keyboards",
+    "price": 119.99,
+    "inventory": 50,
+    "description": "RGB lighting with advanced customization."
+  },
+  {
+    "name": "Silent Mechanical Keyboard",
+    "category": "Keyboards",
+    "price": 109.99,
+    "inventory": 40,
+    "description": "Silent keys for quiet operation."
+  },
+  {
+    "name": "Gaming Mouse Pro",
+    "category": "Mice",
+    "price": 49.99,
+    "inventory": 100,
+    "description": "High precision gaming mouse with customizable buttons."
+  },
+  {
+    "name": "Wireless Mouse Elite",
+    "category": "Mice",
+    "price": 39.99,
+    "inventory": 150,
+    "description": "Ergonomic wireless mouse with long battery life."
+  },
+  {
+    "name": "Ergonomic Mouse Comfort",
+    "category": "Mice",
+    "price": 29.99,
+    "inventory": 120,
+    "description": "Designed to reduce strain with ergonomic design."
+  },
+  {
+    "name": "RGB Gaming Mouse",
+    "category": "Mice",
+    "price": 59.99,
+    "inventory": 80,
+    "description": "RGB lighting and programmable buttons."
+  },
+  {
+    "name": "Compact Travel Mouse",
+    "category": "Mice",
+    "price": 19.99,
+    "inventory": 200,
+    "description": "Small and portable for travel."
+  },
+  {
+    "name": "Precision Laser Mouse",
+    "category": "Mice",
+    "price": 44.99,
+    "inventory": 110,
+    "description": "Precision tracking with laser sensor."
+  },
+  {
+    "name": "Ambidextrous Mouse",
+    "category": "Mice",
+    "price": 34.99,
+    "inventory": 90,
+    "description": "Suitable for both left and right-handed users."
+  },
+  {
+    "name": "Silent Click Mouse",
+    "category": "Mice",
+    "price": 39.99,
+    "inventory": 70,
+    "description": "Designed for silent clicking."
+  },
+  {
+    "name": "Ergonomic Vertical Mouse",
+    "category": "Mice",
+    "price": 49.99,
+    "inventory": 60,
+    "description": "Vertical design for ergonomic comfort."
+  },
+  {
+    "name": "High DPI Gaming Mouse",
+    "category": "Mice",
+    "price": 59.99,
+    "inventory": 50,
+    "description": "High DPI settings for competitive gaming."
+  },
+  {
+    "name": "24-inch Full HD Monitor",
+    "category": "Monitors",
+    "price": 129.99,
+    "inventory": 40,
+    "description": "24-inch monitor with full HD resolution."
+  },
+  {
+    "name": "27-inch QHD Monitor",
+    "category": "Monitors",
+    "price": 249.99,
+    "inventory": 30,
+    "description": "27-inch monitor with QHD resolution."
+  },
+  {
+    "name": "32-inch 4K UHD Monitor",
+    "category": "Monitors",
+    "price": 399.99,
+    "inventory": 20,
+    "description": "32-inch monitor with 4K UHD resolution."
+  },
+  {
+    "name": "Gaming Monitor 144Hz",
+    "category": "Monitors",
+    "price": 299.99,
+    "inventory": 25,
+    "description": "High refresh rate gaming monitor."
+  },
+  {
+    "name": "Curved Monitor 27-inch",
+    "category": "Monitors",
+    "price": 279.99,
+    "inventory": 35,
+    "description": "Curved monitor for immersive experience."
+  },
+  {
+    "name": "Ultra-Wide Monitor 34-inch",
+    "category": "Monitors",
+    "price": 499.99,
+    "inventory": 15,
+    "description": "34-inch ultra-wide monitor for multitasking."
+  },
+  {
+    "name": "LED Monitor 22-inch",
+    "category": "Monitors",
+    "price": 109.99,
+    "inventory": 50,
+    "description": "Compact LED monitor for everyday use."
+  },
+  {
+    "name": "Professional Color Monitor 27-inch",
+    "category": "Monitors",
+    "price": 329.99,
+    "inventory": 20,
+    "description": "High color accuracy monitor for professionals."
+  },
+  {
+    "name": "Touchscreen Monitor 24-inch",
+    "category": "Monitors",
+    "price": 199.99,
+    "inventory": 30,
+    "description": "Interactive touchscreen monitor."
+  },
+  {
+    "name": "4K Gaming Monitor 27-inch",
+    "category": "Monitors",
+    "price": 349.99,
+    "inventory": 18,
+    "description": "27-inch monitor with 4K resolution and high refresh rate."
+  },
+  {
+    "name": "Over-Ear Wireless Headphones",
+    "category": "Headphones",
+    "price": 99.99,
+    "inventory": 60,
+    "description": "Over-ear headphones with active noise cancellation."
+  },
+  {
+    "name": "In-Ear Noise Cancelling Earbuds",
+    "category": "Headphones",
+    "price": 79.99,
+    "inventory": 80,
+    "description": "Compact earbuds with noise cancellation."
+  },
+  {
+    "name": "Gaming Headset Pro",
+    "category": "Headphones",
+    "price": 89.99,
+    "inventory": 50,
+    "description": "Gaming headset with surround sound."
+  },
+  {
+    "name": "Bluetooth On-Ear Headphones",
+    "category": "Headphones",
+    "price": 59.99,
+    "inventory": 70,
+    "description": "Bluetooth on-ear headphones with clear sound."
+  },
+  {
+    "name": "Studio Monitor Headphones",
+    "category": "Headphones",
+    "price": 129.99,
+    "inventory": 40,
+    "description": "High fidelity headphones for studio monitoring."
+  },
+  {
+    "name": "Sports Earbuds",
+    "category": "Headphones",
+    "price": 49.99,
+    "inventory": 90,
+    "description": "Secure fit earbuds for sports and exercise."
+  },
+  {
+    "name": "Noise Cancelling Over-Ear Headphones",
+    "category": "Headphones",
+    "price": 119.99,
+    "inventory": 55,
+    "description": "Over-ear headphones with superior noise cancellation."
+  },
+  {
+    "name": "Wired Studio Headphones",
+    "category": "Headphones",
+    "price": 79.99,
+    "inventory": 60,
+    "description": "Wired headphones for professional audio."
+  },
+  {
+    "name": "Wireless Sport Headphones",
+    "category": "Headphones",
+    "price": 69.99,
+    "inventory": 65,
+    "description": "Lightweight and sweat-resistant."
+  },
+  {
+    "name": "Premium Bass Headphones",
+    "category": "Headphones",
+    "price": 109.99,
+    "inventory": 45,
+    "description": "Headphones with enhanced bass performance."
+  },
+  {
+    "name": "All-in-One Laser Printer",
+    "category": "Printers",
+    "price": 199.99,
+    "inventory": 25,
+    "description": "Print, scan, and copy with a laser printer."
+  },
+  {
+    "name": "Wireless Inkjet Printer",
+    "category": "Printers",
+    "price": 99.99,
+    "inventory": 35,
+    "description": "Compact wireless inkjet printer."
+  },
+  {
+    "name": "Photo Printer",
+    "category": "Printers",
+    "price": 149.99,
+    "inventory": 20,
+    "description": "High-quality photo printer."
+  },
+  {
+    "name": "Portable Printer",
+    "category": "Printers",
+    "price": 129.99,
+    "inventory": 15,
+    "description": "Portable printer for on-the-go printing."
+  },
+  {
+    "name": "Color Laser Printer",
+    "category": "Printers",
+    "price": 249.99,
+    "inventory": 18,
+    "description": "Color laser printer with high speed."
+  },
+  {
+    "name": "Business Inkjet Printer",
+    "category": "Printers",
+    "price": 179.99,
+    "inventory": 22,
+    "description": "Reliable printer for business use."
+  },
+  {
+    "name": "Compact Photo Printer",
+    "category": "Printers",
+    "price": 89.99,
+    "inventory": 30,
+    "description": "Compact design ideal for photo printing."
+  },
+  {
+    "name": "Wireless All-in-One Printer",
+    "category": "Printers",
+    "price": 159.99,
+    "inventory": 28,
+    "description": "All-in-one printer with wireless connectivity."
+  },
+  {
+    "name": "High-Speed Laser Printer",
+    "category": "Printers",
+    "price": 229.99,
+    "inventory": 20,
+    "description": "High-speed printing for office use."
+  },
+  {
+    "name": "Eco-Friendly Printer",
+    "category": "Printers",
+    "price": 139.99,
+    "inventory": 32,
+    "description": "Energy-efficient printer for daily use."
+  },
+  {
+    "name": "HD USB Webcam",
+    "category": "Webcams",
+    "price": 49.99,
+    "inventory": 80,
+    "description": "1080p HD USB webcam for video conferencing."
+  },
+  {
+    "name": "Full HD Webcam",
+    "category": "Webcams",
+    "price": 59.99,
+    "inventory": 70,
+    "description": "Full HD webcam with built-in microphone."
+  },
+  {
+    "name": "Webcam with Privacy Cover",
+    "category": "Webcams",
+    "price": 39.99,
+    "inventory": 90,
+    "description": "HD webcam with privacy cover for security."
+  },
+  {
+    "name": "Wide-Angle Webcam",
+    "category": "Webcams",
+    "price": 69.99,
+    "inventory": 60,
+    "description": "Wide-angle lens for group meetings."
+  },
+  {
+    "name": "Professional Streaming Webcam",
+    "category": "Webcams",
+    "price": 89.99,
+    "inventory": 50,
+    "description": "High-quality webcam for live streaming."
+  },
+  {
+    "name": "4K Ultra HD Webcam",
+    "category": "Webcams",
+    "price": 129.99,
+    "inventory": 40,
+    "description": "4K resolution webcam for professional use."
+  },
+  {
+    "name": "Compact Webcam",
+    "category": "Webcams",
+    "price": 29.99,
+    "inventory": 100,
+    "description": "Compact design for easy mounting."
+  },
+  {
+    "name": "Low-Light Webcam",
+    "category": "Webcams",
+    "price": 59.99,
+    "inventory": 75,
+    "description": "Enhanced performance in low-light conditions."
+  },
+  {
+    "name": "Adjustable Webcam",
+    "category": "Webcams",
+    "price": 49.99,
+    "inventory": 85,
+    "description": "Easily adjustable webcam for optimal positioning."
+  },
+  {
+    "name": "Plug and Play Webcam",
+    "category": "Webcams",
+    "price": 39.99,
+    "inventory": 95,
+    "description": "Simple plug and play functionality."
+  },
+  {
+    "name": "Bluetooth Portable Speaker",
+    "category": "Speakers",
+    "price": 49.99,
+    "inventory": 80,
+    "description": "Portable Bluetooth speaker with powerful sound."
+  },
+  {
+    "name": "Desktop Computer Speaker",
+    "category": "Speakers",
+    "price": 29.99,
+    "inventory": 90,
+    "description": "Compact desktop speakers for computer audio."
+  },
+  {
+    "name": "Surround Sound Speaker System",
+    "category": "Speakers",
+    "price": 149.99,
+    "inventory": 40,
+    "description": "5.1 surround sound speaker system."
+  },
+  {
+    "name": "Waterproof Outdoor Speaker",
+    "category": "Speakers",
+    "price": 59.99,
+    "inventory": 70,
+    "description": "Durable waterproof speaker for outdoor use."
+  },
+  {
+    "name": "Wireless Bass Speaker",
+    "category": "Speakers",
+    "price": 79.99,
+    "inventory": 50,
+    "description": "Wireless speaker with enhanced bass performance."
+  },
+  {
+    "name": "Portable Mini Speaker",
+    "category": "Speakers",
+    "price": 19.99,
+    "inventory": 120,
+    "description": "Small but powerful portable speaker."
+  },
+  {
+    "name": "Hi-Fi Stereo Speaker",
+    "category": "Speakers",
+    "price": 99.99,
+    "inventory": 35,
+    "description": "High fidelity stereo speakers for quality audio."
+  },
+  {
+    "name": "USB Powered Speaker",
+    "category": "Speakers",
+    "price": 24.99,
+    "inventory": 110,
+    "description": "Convenient USB powered speakers for your desk."
+  },
+  {
+    "name": "Smart Speaker with Assistant",
+    "category": "Speakers",
+    "price": 129.99,
+    "inventory": 45,
+    "description": "Smart speaker with voice assistant integration."
+  },
+  {
+    "name": "Surround Sound Bluetooth Speaker",
+    "category": "Speakers",
+    "price": 159.99,
+    "inventory": 30,
+    "description": "Premium surround sound experience via Bluetooth."
+  }
+]

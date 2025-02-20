@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <%- include('partials/header', { title: 'Products' }) %> <%-
+    include('partials/navbar') %>
+
+    <h2>Admin Dashboard</h2>
+
+    <h3>Sales Trends</h3>
+    <% if (salesTrends && salesTrends.length > 0) { %>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Date</th>
+        <th>Total Sales ($)</th>
+        <th>Order Count</th>
+      </tr>
+      <% salesTrends.forEach(trend => { %>
+      <tr>
+        <td><%= trend.date %></td>
+        <td><%= trend.totalSales.toFixed(2) %></td>
+        <td><%= trend.orderCount %></td>
+      </tr>
+      <% }); %>
+    </table>
+    <% } else { %>
+    <p>No sales data available.</p>
+    <% } %>
+  </body>
+</html>

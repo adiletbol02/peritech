@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Activity</title>
+  </head>
+  <body>
+    <%- include('partials/header', { title: 'Products' }) %> <%-
+    include('partials/navbar') %>
+
+    <h2>Customer Activity</h2>
+    <ul>
+      <% customerActivity.forEach(activity => { %>
+      <li><%= activity.user %> - <%= activity.activity %></li>
+      <% }); %>
+    </ul>
+    <a href="/admin/dashboard">Back to Dashboard</a>
+  </body>
+</html>

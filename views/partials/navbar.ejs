@@ -1,0 +1,12 @@
+<nav style="padding: 10px; border-bottom: 1px solid #ccc">
+  <ul style="list-style: none; display: flex; gap: 15px">
+    <li><a href="/products">Main Page</a></li>
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/cart">Cart</a></li>
+    <% if (user && user.isAdmin) { %>
+    <li><a href="/admin/dashboard">Admin Dashboard</a></li>
+    <% } %>
+    <li><a href="/orders">My Orders</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+</nav>

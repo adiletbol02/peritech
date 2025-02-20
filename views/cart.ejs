@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Cart</title>
+  </head>
+  <body>
+    <%- include('partials/header', { title: 'Products' }) %> <%-
+    include('partials/navbar') %>
+
+    <h2>Your Cart</h2>
+    <% if (cartItems.length === 0) { %>
+    <p>Your cart is empty.</p>
+    <% } else { %>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Product</th>
+        <th>Current Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+        <th>Actions</th>
+      </tr>
+      <% cartItems.forEach(item => { %>
+      <tr>
+        <td><%= item.product.name %></td>
+        <td>$<%= item.product.price.toFixed(2) %></td>
+        <td>
+          <input
+            type="number"
+            name="quantity"
+            value="<%= item.quantity %>"
+            min="1"
+            style="width: 50px"
+            class="quantity-input"
+            data-product-id="<%= item.product._id %>"
+            data-price="<%= item.product.price %>"
+          />
+        </td>
+        <td class="subtotal">$<%= item.subtotal.toFixed(2) %></td>
+        <td>
+          <form
+            action="/cart/remove/<%= item.product._id %>"
+            method="POST"
+            style="display: inline"
+          >
+            <button type="submit">Remove</button>
+          </form>
+        </td>
+      </tr>
+      <% }); %>
+      <tr>
+        <td colspan="3" align="right">Total:</td>
+        <td id="totalPrice">$<%= totalPrice.toFixed(2) %></td>
+        <td></td>
+      </tr>
+    </table>
+    <form action="/cart/checkout" method="POST">
+      <button type="submit">Checkout</button>
+    </form>
+    <% } %>
+    <a href="/products">Continue Shopping</a>
+
+    <script>
+      document.querySelectorAll(".quantity-input").forEach((input) => {
+        input.addEventListener("change", function () {
+          const productId = this.getAttribute("data-product-id");
+          const newQuantity = this.value;
+          const price = parseFloat(this.getAttribute("data-price"));
+
+          fetch("/cart/update", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ productId, quantity: newQuantity }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.error) {
+                alert(data.error);
+                window.location.reload();
+              } else {
+                const row = this.closest("tr");
+                const subtotalCell = row.querySelector(".subtotal");
+                const newSubtotal = price * newQuantity;
+                subtotalCell.textContent = "$" + newSubtotal.toFixed(2);
+                recalcTotal();
+              }
+            })
+            .catch((err) => {
+              console.error(err);
+              alert("Error updating cart.");
+            });
+        });
+      });
+
+      function recalcTotal() {
+        let total = 0;
+        document.querySelectorAll(".subtotal").forEach((cell) => {
+          const val = parseFloat(cell.textContent.replace("$", "")) || 0;
+          total += val;
+        });
+        document.getElementById("totalPrice").textContent =
+          "$" + total.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

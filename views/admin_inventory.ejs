@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inventory Status</title>
+  </head>
+  <body>
+    <%- include('partials/header', { title: 'Products' }) %> <%-
+    include('partials/navbar') %>
+
+    <h2>Inventory Status</h2>
+    <ul>
+      <% inventoryStatus.forEach(product => { %>
+      <li><%= product.name %> - Inventory: <%= product.inventory %></li>
+      <% }); %>
+    </ul>
+    <a href="/admin/dashboard">Back to Dashboard</a>
+  </body>
+</html>

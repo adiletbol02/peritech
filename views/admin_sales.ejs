@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detailed Sales Trends</title>
+</head>
+<body>
+  <%- include('partials/header', { title: 'Products' }) %>
+  <%- include('partials/navbar') %>
+  
+  <h2>Detailed Sales Trends</h2>
+  
+  <form action="/admin/dashboard/sales" method="GET">
+    <label for="viewType">View Type:</label>
+    <select id="viewType" name="viewType">
+      <option value="date" <%= viewType === 'date' ? 'selected' : '' %>>Sales by Date</option>
+      <option value="product" <%= viewType === 'product' ? 'selected' : '' %>>Sales by Product</option>
+    </select>
+    <br/>
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" value="<%= startDate %>">
+    
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" value="<%= endDate %>">
+    <br/>
+    <% if (viewType === 'date') { %>
+      <label for="includeBestSeller">Include Best-Selling Product:</label>
+      <input type="checkbox" id="includeBestSeller" name="includeBestSeller" value="1" <%= includeBestSeller === '1' ? 'checked' : '' %>>
+      <br/>
+    <% } %>
+    <button type="submit">Apply Filters</button>
+  </form>
+  
+  <% if (viewType === 'date') { %>
+    <% if (salesTrends && salesTrends.length > 0) { %>
+      <table border="1" cellpadding="5">
+        <tr>
+          <th>Date</th>
+          <th>Total Sales ($)</th>
+          <th>Order Count</th>
+          <th>Average Order Value ($)</th>
+          <th>Total Items Sold</th>
+          <% if (includeBestSeller === '1') { %>
+            <th>Best Selling Product</th>
+            <th>Quantity Sold (Best)</th>
+          <% } %>
+        </tr>
+        <% salesTrends.forEach(trend => { %>
+          <tr>
+            <td><%= trend.date %></td>
+            <td><%= trend.totalSales.toFixed(2) %></td>
+            <td><%= trend.orderCount %></td>
+            <td><%= trend.averageOrderValue.toFixed(2) %></td>
+            <td><%= trend.totalItems %></td>
+            <% if (includeBestSeller === '1') { %>
+              <td><%= trend.bestSellingProduct %></td>
+              <td><%= trend.bestSellingQuantity %></td>
+            <% } %>
+          </tr>
+        <% }); %>
+      </table>
+    <% } else { %>
+      <p>No sales data available for the selected range.</p>
+    <% } %>
+  <% } else if (viewType === 'product') { %>
+    <% if (salesTrends && salesTrends.length > 0) { %>
+      <table border="1" cellpadding="5">
+        <tr>
+          <th>Product Name</th>
+          <th>Total Sales ($)</th>
+          <th>Total Quantity Sold</th>
+          <th>Order Count</th>
+        </tr>
+        <% salesTrends.forEach(item => { %>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= item.totalSales.toFixed(2) %></td>
+            <td><%= item.totalQuantity %></td>
+            <td><%= item.orderCount %></td>
+          </tr>
+        <% }); %>
+      </table>
+    <% } else { %>
+      <p>No product sales data available for the selected range.</p>
+    <% } %>
+  <% } %>
+  
+  <a href="/admin/dashboard">Back to Dashboard</a>
+</body>
+</html>

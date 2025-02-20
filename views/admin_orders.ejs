@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Orders</title>
+</head>
+<body>
+  <%- include('partials/header', { title: 'Products' }) %>
+  <%- include('partials/navbar') %>
+  
+  <h2>All Orders</h2>
+  
+  <% if (orders.length === 0) { %>
+    <p>No orders found.</p>
+  <% } else { %>
+    <% orders.forEach(order => { %>
+      <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+        <h3>Order placed on <%= order.createdAt.toLocaleString() %></h3>
+        <p>
+          Placed by: <%= order.user ? order.user.username : "Unknown" %> (<%= order.user ? order.user.email : "N/A" %>)
+        </p>
+        <p>Status: <%= order.status %></p>
+        <form action="/admin/dashboard/orders/update/<%= order._id %>" method="POST">
+          <select name="status">
+            <option value="pending" <%= order.status === 'pending' ? 'selected' : '' %>>Pending</option>
+            <option value="approved" <%= order.status === 'approved' ? 'selected' : '' %>>Approved</option>
+            <option value="declined" <%= order.status === 'declined' ? 'selected' : '' %>>Declined</option>
+          </select>
+          <button type="submit">Update Status</button>
+        </form>
+        <ul>
+          <% order.items.forEach(item => { %>
+            <li>
+              Product: <%= item.product ? item.product.name : 'Unknown Product' %> - 
+              Quantity: <%= item.quantity %> - 
+              Price: $<%= item.price.toFixed(2) %>
+            </li>
+          <% }); %>
+        </ul>
+        <p>Total Price: $<%= order.totalPrice.toFixed(2) %></p>
+        <form action="/admin/dashboard/orders/delete/<%= order._id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this order?');">
+            <button type="submit" style="background:none; border:none; color:red; cursor:pointer;">Delete Order</button>
+          </form>
+      </div>
+    <% }); %>
+  <% } %>
+  
+  <a href="/admin/dashboard">Back to Dashboard</a>
+</body>
+</html>

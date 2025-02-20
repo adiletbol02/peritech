@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Orders</title>
+  </head>
+  <body>
+    <%- include('partials/header', { title: 'Products' }) %> <%-
+    include('partials/navbar') %>
+
+    <h2>Your Orders</h2>
+    <% if (orders.length === 0) { %>
+    <p>No orders found.</p>
+    <% } else { %> <% orders.forEach(order => { %>
+    <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px">
+      <h3>Order placed on <%= order.createdAt.toLocaleString() %></h3>
+      <p>Status: <%= order.status %></p>
+      <ul>
+        <% order.items.forEach(item => { %>
+        <li>
+          Product: <%= item.product ? item.product.name : 'Unknown Product' %> -
+          Quantity: <%= item.quantity %> - Price: $<%= item.price.toFixed(2) %>
+        </li>
+        <% }); %>
+      </ul>
+      <p>Total Price: $<%= order.totalPrice.toFixed(2) %></p>
+    </div>
+    <% }); %> <% } %>
+    <a href="/products">Continue Shopping</a>
+  </body>
+</html>

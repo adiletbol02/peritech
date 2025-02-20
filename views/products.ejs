@@ -1,0 +1,62 @@
+<%- include('partials/header', { title: 'Products' }) %>
+<%- include('partials/navbar') %>
+
+<h2>Products</h2>
+
+<form action="/products" method="GET" style="margin-bottom: 20px;">
+  <label>Category:</label>
+  <select name="category">
+    <option value="">All</option>
+    <% categories.forEach(cat => { %>
+      <option value="<%= cat %>" <%= filterParams.category === cat ? 'selected' : '' %>><%= cat %></option>
+    <% }) %>
+  </select>
+  <label>Min Price:</label>
+  <input type="number" name="minPrice" step="0.01" value="<%= filterParams.minPrice || '' %>">
+  <label>Max Price:</label>
+  <input type="number" name="maxPrice" step="0.01" value="<%= filterParams.maxPrice || '' %>">
+  <label>Search:</label>
+  <input type="text" name="search" value="<%= filterParams.search || '' %>">
+  <button type="submit">Filter</button>
+</form>
+
+<div style="margin-bottom: 20px;">
+  Sort by:
+  <% 
+    // Helper function to build query string with new sort value,
+    // preserving all existing filter parameters.
+    function buildQuery(newSort) {
+      var params = Object.assign({}, filterParams);
+      params.sort = newSort;
+      var queryString = Object.keys(params)
+        .map(key => key + '=' + encodeURIComponent(params[key]))
+        .join('&');
+      return '/products?' + queryString;
+    }
+  %>
+  <a href="<%= buildQuery('price_asc') %>">Price Ascending</a> |
+  <a href="<%= buildQuery('price_desc') %>">Price Descending</a> |
+  <a href="<%= buildQuery('name_asc') %>">Name Ascending</a> |
+  <a href="<%= buildQuery('name_desc') %>">Name Descending</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap;">
+  <% if (products.length === 0) { %>
+    <p>No products available.</p>
+  <% } else { %>
+    <% products.forEach(product => { %>
+      <div style="border: 1px solid #ccc; margin: 10px; padding: 10px; width: calc(33.33% - 20px); box-sizing: border-box;">
+        <h4><%= product.name %></h4>
+        <p>Category: <%= product.category %></p>
+        <p>Price: $<%= product.price %></p>
+        <p>Inventory: <%= product.inventory %></p>
+        <p><%= product.description %></p>
+        <form action="/cart/add/<%= product._id %>" method="POST" style="margin-top: 10px;">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+    <% }); %>
+  <% } %>
+</div>
+
+<%- include('partials/footer') %>

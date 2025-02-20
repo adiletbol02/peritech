@@ -1,0 +1,82 @@
+<%- include('partials/header', { title: 'Manage Products' }) %>
+<%- include('partials/navbar') %>
+
+<h2>Manage Products</h2>
+
+<p>
+  <a href="/admin/dashboard/products/new">Add New Product</a>
+</p>
+
+<form action="/admin/dashboard/products" method="GET" style="margin-bottom: 20px;">
+  <label>Category:</label>
+  <select name="category">
+    <option value="">All</option>
+    <% categories.forEach(cat => { %>
+      <option value="<%= cat %>" <%= filterParams.category === cat ? 'selected' : '' %>><%= cat %></option>
+    <% }) %>
+  </select>
+  <label>Min Price:</label>
+  <input type="number" name="minPrice" step="0.01" value="<%= filterParams.minPrice || '' %>">
+  <label>Max Price:</label>
+  <input type="number" name="maxPrice" step="0.01" value="<%= filterParams.maxPrice || '' %>">
+  <label>Search:</label>
+  <input type="text" name="search" value="<%= filterParams.search || '' %>">
+  <button type="submit">Filter</button>
+</form>
+
+<div style="margin-bottom: 20px;">
+  Sort by:
+  <% 
+    function buildQuery(newSort) {
+      var params = Object.assign({}, filterParams);
+      params.sort = newSort;
+      var queryString = Object.keys(params)
+        .map(key => key + '=' + encodeURIComponent(params[key]))
+        .join('&');
+      return '/admin/dashboard/products?' + queryString;
+    }
+  %>
+  <a href="<%= buildQuery('price_asc') %>">Price Ascending</a> |
+  <a href="<%= buildQuery('price_desc') %>">Price Descending</a> |
+  <a href="<%= buildQuery('name_asc') %>">Name Ascending</a> |
+  <a href="<%= buildQuery('name_desc') %>">Name Descending</a>
+</div>
+
+<table border="1" cellpadding="10" cellspacing="0" style="width:100%;">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Inventory</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if (products.length === 0) { %>
+      <tr>
+        <td colspan="6">No products available.</td>
+      </tr>
+    <% } else { %>
+      <% products.forEach(product => { %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.category %></td>
+          <td>$<%= product.price %></td>
+          <td><%= product.inventory %></td>
+          <td><%= product.description %></td>
+          <td>
+            <a href="/admin/dashboard/products/edit/<%= product._id %>">Edit</a>
+            |
+            <form action="/admin/dashboard/products/delete/<%= product._id %>" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this product?');">
+              <button type="submit" style="background:none; border:none; color:red; cursor:pointer;">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    <% } %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>
