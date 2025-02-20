@@ -65,7 +65,7 @@ npm start
 The application will be available at http://localhost:3000.
 
 ## Project Structure
-
+```
 project/
 ├── models/
 │ ├── User.js # User schema & authentication logic
@@ -102,7 +102,7 @@ project/
 ├── .env # Environment configuration file
 ├── package.json # Project dependencies and scripts
 └── server.js # Main application server setup
-
+```
 ## Usage
 
 **Users:**
