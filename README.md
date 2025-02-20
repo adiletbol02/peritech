@@ -77,30 +77,30 @@ The application will be available at http://localhost:3000.
 ```
 project/
 ├── models/
-│ ├── User.js       # User schema & authentication logic
-│ ├── Product.js # Product schema
-│ ├── Cart.js # Shopping cart schema (persistent in MongoDB)
-│ └── Order.js # Order schema (includes order status and product details)
+│ ├── User.js                   # User schema & authentication logic
+│ ├── Product.js                # Product schema
+│ ├── Cart.js                   # Shopping cart schema (persistent in MongoDB)
+│ └── Order.js                  # Order schema (includes order status and product details)
 ├── routes/
-│ ├── auth.js # Authentication routes (login, register, profile)
-│ ├── products.js # Public product catalog routes with filtering & sorting
-│ ├── cart.js # Shopping cart routes
-│ ├── orders.js # User orders routes
-│ └── admin.js # Admin dashboard routes (sales trends, manage products, orders, users)
+│ ├── auth.js                   # Authentication routes (login, register, profile)
+│ ├── products.js               # Public product catalog routes with filtering & sorting
+│ ├── cart.js                   # Shopping cart routes
+│ ├── orders.js                 # User orders routes
+│ └── admin.js                  # Admin dashboard routes (sales trends, manage products, orders, users)
 ├── middleware/
-│ └── auth.js # Middleware for authentication & admin authorization
+│ └── auth.js                   # Middleware for authentication & admin authorization
 ├── public/
-│ └── style.css # Custom CSS styles
+│ └── style.css                 # Custom CSS styles
 ├── views/
 │ ├── partials/
-│ │ ├── header.ejs # Common header with stylesheet link
-│ │ ├── navbar.ejs # Navigation bar (includes link to admin dashboard if admin)
-│ │ └── footer.ejs # Common footer
-│ ├── login.ejs # Login page
-│ ├── register.ejs # Registration page
-│ ├── profile.ejs # User profile page
-│ ├── products.ejs # Public products listing (with filters & sorting)
-│ ├── cart.ejs # Shopping cart page (with AJAX updating)
+│ │ ├── header.ejs              # Common header with stylesheet link
+│ │ ├── navbar.ejs              # Navigation bar
+│ │ └── footer.ejs              # Common footer
+│ ├── login.ejs                 # Login page
+│ ├── register.ejs              # Registration page
+│ ├── profile.ejs               # User profile page
+│ ├── products.ejs              # Public products listing (with filters & sorting)
+│ ├── cart.ejs                  # Shopping cart page (with AJAX updating)
 │ ├── orders.ejs                # User orders page
 │ ├── admin_dashboard_hub.ejs   # Main admin dashboard hub with links to subsections
 │ ├── admin_sales.ejs           # Detailed sales trends view (customizable)
