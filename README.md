@@ -77,7 +77,7 @@ The application will be available at http://localhost:3000.
 ```
 project/
 ├── models/
-│ ├── User.js # User schema & authentication logic
+│ ├── User.js       # User schema & authentication logic
 │ ├── Product.js # Product schema
 │ ├── Cart.js # Shopping cart schema (persistent in MongoDB)
 │ └── Order.js # Order schema (includes order status and product details)
@@ -101,16 +101,16 @@ project/
 │ ├── profile.ejs # User profile page
 │ ├── products.ejs # Public products listing (with filters & sorting)
 │ ├── cart.ejs # Shopping cart page (with AJAX updating)
-│ ├── orders.ejs # User orders page
-│ ├── admin_dashboard_hub.ejs # Main admin dashboard hub with links to subsections
-│ ├── admin_sales.ejs # Detailed sales trends view (customizable)
-│ ├── admin_products.ejs # Admin product management view (list/table format with filtering/sorting)
-│ ├── admin_orders.ejs # Admin orders management view (with status update and deletion)
-│ └── admin_users.ejs # Admin user management view (change user roles)
-├── products.json # JSON file with sample product catalog
-├── .env # Environment configuration file
-├── package.json # Project dependencies and scripts
-└── server.js # Main application server setup
+│ ├── orders.ejs                # User orders page
+│ ├── admin_dashboard_hub.ejs   # Main admin dashboard hub with links to subsections
+│ ├── admin_sales.ejs           # Detailed sales trends view (customizable)
+│ ├── admin_products.ejs        # Admin product management view (list/table format with filtering/sorting)
+│ ├── admin_orders.ejs          # Admin orders management view (with status update and deletion)
+│ └── admin_users.ejs           # Admin user management view (change user roles)
+├── products.json               # JSON file with sample product catalog
+├── .env                        # Environment configuration file
+├── package.json                # Project dependencies and scripts
+└── server.js                   # Main application server setup
 ```
 ## Usage
 
