@@ -79,8 +79,8 @@ project/
 ├── models/
 │ ├── User.js                   # User schema & authentication logic
 │ ├── Product.js                # Product schema
-│ ├── Cart.js                   # Shopping cart schema (persistent in MongoDB)
-│ └── Order.js                  # Order schema (includes order status and product details)
+│ ├── Cart.js                   # Shopping cart schema 
+│ └── Order.js                  # Order schema 
 ├── routes/
 │ ├── auth.js                   # Authentication routes (login, register, profile)
 │ ├── products.js               # Public product catalog routes with filtering & sorting
@@ -99,13 +99,13 @@ project/
 │ ├── login.ejs                 # Login page
 │ ├── register.ejs              # Registration page
 │ ├── profile.ejs               # User profile page
-│ ├── products.ejs              # Public products listing (with filters & sorting)
-│ ├── cart.ejs                  # Shopping cart page (with AJAX updating)
+│ ├── products.ejs              # Public products listing 
+│ ├── cart.ejs                  # Shopping cart page 
 │ ├── orders.ejs                # User orders page
 │ ├── admin_dashboard_hub.ejs   # Main admin dashboard hub with links to subsections
-│ ├── admin_sales.ejs           # Detailed sales trends view (customizable)
-│ ├── admin_products.ejs        # Admin product management view (list/table format with filtering/sorting)
-│ ├── admin_orders.ejs          # Admin orders management view (with status update and deletion)
+│ ├── admin_sales.ejs           # Detailed sales trends view 
+│ ├── admin_products.ejs        # Admin product management view 
+│ ├── admin_orders.ejs          # Admin orders management view 
 │ └── admin_users.ejs           # Admin user management view (change user roles)
 ├── products.json               # JSON file with sample product catalog
 ├── .env                        # Environment configuration file
